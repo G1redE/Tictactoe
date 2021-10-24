@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Permanent Marker", cursive
+}
+body{
+    height: 100vh;
+    width: 100vw;
+   
+    background: linear-gradient(to right, rgb(0,0,0),rgba(102, 67, 67));
+}
+
+.bg{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.bg .bgo{
+    height: 100%;
+    width: 12.5%;
+    text-align: center;
+}
+.bg .bgx{
+    height: 100%;
+    width: 12.5%;
+    text-align: center; 
+}
+.texto{
+    color: rgb(255,255,255);
+    animation: move 30s infinite;
+    
+}
+.textx{
+    color: rgb(255,255,255);
+    animation: move 30s infinite;
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(49vh) rotateY(180deg) rotateX(180deg);
+    }
+    50%{
+        transform: translateY(98vh) rotateY(360deg) rotateX(360deg);
+    }
+    75%{
+        transform: translateY(49vh) rotateY(180deg) rotateX(180deg); ;
+    }
+    100%{
+        transform: translateY(0vh) rotateY(0deg) rotateX(180deg);
+    }
+
+}
+
+
+#CDIV {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;    
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
+.divF {
+    
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.2);
+    color: #000;
+    
+    
+    border: solid 1px #999;
+   
+    box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: block;
+    border-radius: 15px;
+    
+  
+    color: #cfe226;
+   
+}
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 10px auto;
+    background-color:rgba(0, 0, 0, 0.8);
+    color: #f3efef;
+}
+
+.cell {
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ecd7ba;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 60px;
+}
+.game--status {
+    font-size: 50px;
+    color: #682cff;
+    margin: 20px auto;
+}
+.game--status:focus{
+    transform: scaleX(150%) scaleY(150%);
+}
+
+@media (max-width:300px){
+    .game--container {
+        width: 280px;
+    
+}
+.cell{
+    width: 80px;
+    height: 80px;
+}
+}
